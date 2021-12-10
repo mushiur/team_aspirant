@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+
+:root {
+  --orange: #ffa500;
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+body {
+  background-image: url("image/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.booking-form-box {
+  padding: 5%;
+  background-color: rgba(37, 158, 158, 0.424);
+  color: rgb(8, 3, 4);
+  max-width: 450px;
+  border: thick double #9ef15a54;
+  margin: 10% auto 0;
+}
+.booking-form {
+  font-size: larger;
+  text-align: center;
+}
+input[type="text"] {
+  padding: 5px;
+  border: 2px solid #ccc;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+input[type="text"]:focus {
+  border-color: #333;
+}
+
+input[type="submit"] {
+  padding: 5px 15px;
+  background: rgb(99, 211, 95);
+  border: 0 none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* media queries  */
+
+@media (max-width: 1200px) {
+  body {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+  .booking-form-box,
+  .booking-form {
+    padding: 2rem;
+  }
+
+  .booking-form-box,
+  .booking-form {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-bar {
+    display: initial;
+  }
+
+  .booking-form-box,
+  .booking-form {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: #333;
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+    padding: 1rem 2rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .booking-form-box,
+  .booking-form {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .booking-form-box,
+  .booking-form {
+    display: block;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    background: #222;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .heading span {
+    font-size: 2.5rem;
+  }
+
+  .booking-form-box .booking-form .inputBox input {
+    width: 100%;
+  }
+}
