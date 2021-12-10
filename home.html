@@ -22,9 +22,14 @@
   <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <link href="./css/login.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/home.css" rel="stylesheet">
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
 </head>
@@ -44,14 +49,23 @@
           <li class="nav-item">
             <a class="nav-link js-scroll active" href="#home">Home</a>
           </li>
-          <a class="nav-link js-scroll"target="_blank" href="date/index.html" >E-Ticket</a>
+          <a class="nav-link js-scroll"target="_blank" href="./date.html" >E-Ticket</a>
         </li>
             <a class="nav-link js-scroll" href="#contact">Contact</a>
           </li>
+          <li>
+            <a class="nav-link js-scroll" href="#"><i class="fas fa-search" id="search-btn"></i></a>
+            
+          </li>
+        </li>
+        <a  class="nav-link js-scroll" href="#"><ion-icon id="demo" name="person-add-sharp"></ion-icon></a>
+      </li>
         </ul>
+        
       </div>
     </div>
   </nav>
+ 
   <!--/ Nav End /-->
 
   <!--/ Intro Skew Star /-->
@@ -179,8 +193,133 @@
   </section>
   <!--/ Section Contact-footer End /-->
 
+
+
+  <div id="id01" class="modal">
+  
+    <form id="form-content" class="modal-content animate" >
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="img/avatar.jpg" alt="Avatar" class="avatar">
+      </div>
+  
+      <div class="container">
+        <label for="uname"><b>Email</b></label><br>
+        <input id="UserEmail" type="email" placeholder="Enter email address" name="uname" required>
+  
+        <label for="psw"><b>Password</b></label>
+        <input type="password" id="UserPass" placeholder="Enter Password" name="psw" required>
+          
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+  
+      <div class="container" style="background-color:#ffffff67">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <span class="psw">Create a <a href="./register.html">Account</a></span>
+      </div>
+    </form>
+  </div>
+  
+
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <div id="preloader"></div>
+
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+  <script>
+    firebase.initializeApp({
+      apiKey: "AIzaSyD7qSlAu1KFdZ02XF1irVMYtjddjurFm1g",
+      authDomain: "transport2021-79353.firebaseapp.com",
+      projectId: "transport2021-79353",
+      storageBucket: "transport2021-79353.appspot.com",
+      messagingSenderId: "947174907726",
+      appId: "1:947174907726:web:0f6e51dc7109311cbc881f",
+      measurementId: "${config.measurementId}",
+    });
+
+    var auth = firebase.auth();
+
+    var db = firebase.database();
+
+    function EmailCheck(value)
+                    {
+                      let expression = /^[^@]+@\w+(\.\w+)+\w$/
+                      if(expression.test(value) == true)
+                      {
+                        return value;
+                      }else{
+                        
+                        alert('please provide valid email address');
+                        return;
+                      }
+                    }
+
+                    function PasswordLength(value)
+                    {
+                      if(value.length <6)
+                      {
+                        alert('Please provide at least 6digit for password');
+                        return;
+                      }else
+                      {
+                        return value;
+                      }
+                    }
+
+                    // const log = document.getElementById("login")
+                    // log.onclick = function(){
+
+                          const SignInForm = document.querySelector('#form-content');
+                          SignInForm.addEventListener("submit",function(e){
+
+                          
+                           e.preventDefault();
+                          let email = EmailCheck(SignInForm['UserEmail'].value);
+                          let pass = PasswordLength(SignInForm['UserPass'].value);
+
+                          // console.log(`${email} | ${pass}`);
+
+                          auth.signInWithEmailAndPassword(email,pass)
+                          .then(function(){
+
+                            
+                             alert('User Logged in');
+
+                            window.location = "./date.html";
+
+                            
+                            
+
+                          })
+                          .catch(function(error){
+
+                            var error_code = error.code;
+                            var error_message = error.message;
+
+                            // alert(`${error_code} | ${error_message}`);
+                            if (error_code === 'auth/wrong-password') {
+                                alert('Wrong password.');
+                              } else {
+                                alert(error_message);
+                              }
+                              console.log(error);
+                            document.getElementById('form-content').reset();
+                            
+                          })
+
+                          
+                  
+
+
+                        });
+
+    </script>
 
   <!-- JavaScript Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>
@@ -198,6 +337,18 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+    
+    // When the user clicks anywhere outside of the modal, close it
+    document.getElementById("demo").addEventListener("click",function(){
+
+      document.getElementById('id01').style.display='block'
+    
+    })
+    </script>
 
 </body>
 </html>

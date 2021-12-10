@@ -15,7 +15,7 @@
   transition: all 0.2s linear;
 }
 body {
-  background-image: url("image/background.jpg");
+  background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }

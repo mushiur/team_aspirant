@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./css/bus_route.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/payment.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+  </head>
+  <body>
+    <div id="section_one" class="section_one">
+      <div class="location">
+        <img src="./img/image.png" alt="car logo" />
+      </div>
+      <p style="text-align: center; font-size: 20px">Dhaka To Savar</p>
+
+      <div class="operator">
+        <p>Operator(Bus Type)</p>
+      </div>
+
+      <div class="daffodil-1">
+        <div class="heading">
+          <div class="const">
+            <p>Surjomukhi</p>
+          </div>
+
+          <div class="const">
+            <p>08:00 AM (Departure)</p>
+          </div>
+
+          <div class="const">
+            <p>10:00 AM (Arrival)</p>
+          </div>
+
+          <div class="const">
+            <span>36 </span>
+            <span> Seats Available</span>
+          </div>
+
+          <div class="const">
+            <p>30 TK (cost)</p>
+          </div>
+        </div>
+
+        <div class="route_desc">
+          <span style="font-weight: bold">Route : </span>
+          <span
+            >Dhanmondi - Shyamoli - Technical Mor - Beri Badh  - Ashulia Smart City</span
+          >
+        </div>
+
+        <div class="starting_point">
+          <span style="font-weight: bold"> Starting Point : </span>
+          <span> Dhanmondi</span>
+        </div>
+
+        <div class="ending_point">
+          <span style="font-weight: bold"> Ending Point : </span>
+          <span> Ashulia Smart City</span>
+        </div>
+
+        <div class="view_details">
+          <button id="view_port">view seats</button>
+        </div>
+      </div>
+
+      <div class="daffodil-1">
+        <div class="heading">
+          <div class="const">
+            <p>Rojonigondha</p>
+          </div>
+
+          <div class="const">
+            <p>7:00 AM(Departure) </p>
+          </div>
+
+          <div class="const">
+            <p>9:30 AM (Arrival)</p>
+          </div>
+
+          <div class="const">
+            <span>40 </span>
+            <span> Seats Available</span>
+          </div>
+
+          <div class="const">
+            <p>50 TK (cost)</p>
+          </div>
+        </div>
+
+        <div class="route_desc">
+          <span style="font-weight: bold">Route : </span>
+          <span
+            >Chashara - Sain Board - Jatrbari - Azimpur - Main Campus - Ashulia Smart City</span
+          >
+        </div>
+
+        <div class="starting_point">
+          <span style="font-weight: bold"> Starting Point : </span>
+          <span> Narayanganj</span>
+        </div>
+
+        <div class="ending_point">
+          <span style="font-weight: bold"> Ending Point : </span>
+          <span> Ashulia Smart City</span>
+        </div>
+
+        <div class="view_details">
+          <button id="view_port_1">view seats</button>
+        </div>
+      </div>
+
+      <div class="daffodil-1">
+        <div class="heading">
+          <div class="const">
+            <p>Shapla</p>
+          </div>
+
+          <div class="const">
+            <p>7:30 AM (Arrival)</p>
+          </div>
+
+          <div class="const">
+            <p>10:00 AM (Departure)</p>
+          </div>
+
+          <div class="const">
+            <span>40 </span>
+            <span> Seats Available</span>
+          </div>
+
+          <div class="const">
+            <p>40 TK (cost)</p>
+          </div>
+        </div>
+
+        <div class="route_desc">
+          <span style="font-weight: bold">Route : </span>
+          <span
+            >Rampura - Gulshan - Mohakhali - College gate - Baribadh - Ashulia Smart City</span
+          >
+        </div>
+
+        <div class="starting_point">
+          <span style="font-weight: bold"> Starting Point : </span>
+          <span> Rampura</span>
+        </div>
+
+        <div class="ending_point">
+          <span style="font-weight: bold"> Ending Point : </span>
+          <span> Ashulia Smart City</span>
+        </div>
+
+        <div class="view_details">
+          <button id="view_port_2">view seats</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="section_two" class="section-two">
+      <div class="bus_container_title">
+        <h2>Choose Your Seat</h2>
+      </div>
+      <br />
+
+      <div class="bus_container_sub_title">
+        <p>click the box for select or deslect</p>
+      </div>
+
+      <div class="bus_couch_sector">
+        <div class="bus_couch">
+          <div id="A11" onclick="click_event('A11')" class="square"></div>
+          <div id="A21" onclick="click_event('A21')" class="square"></div>
+
+          <div class="space_relif"></div>
+
+          <div id="A31" onclick="click_event('A31')" class="square"></div>
+          <div id="A41" onclick="click_event('A41')" class="square"></div>
+        </div>
+        <div class="bus_couch">
+          <div id="B11" onclick="click_event('B11')" class="square"></div>
+          <div id="B21" onclick="click_event('B21')" class="square"></div>
+
+          <div class="space_relif"></div>
+
+          <div id="B31" onclick="click_event('B31')" class="square"></div>
+          <div id="B41" onclick="click_event('B41')" class="square"></div>
+        </div>
+
+        <div class="bus_couch">
+          <div id="C11" onclick="click_event('C11')" class="square"></div>
+          <div id="C21" onclick="click_event('C21')" class="square"></div>
+
+          <div class="space_relif"></div>
+
+          <div id="C31" onclick="click_event('C31')" class="square"></div>
+          <div id="C41" onclick="click_event('C41')" class="square"></div>
+        </div>
+
+        <div class="bus_couch">
+          <div id="D11" onclick="click_event('D11')" class="square"></div>
+          <div id="D21" onclick="click_event('D21')" class="square"></div>
+
+          <div class="space_relif"></div>
+
+          <div id="D31" onclick="click_event('D31')" class="square"></div>
+          <div id="D41" onclick="click_event('D41')" class="square"></div>
+        </div>
+
+        <div class="bus_couch">
+          <div id="E11" onclick="click_event('E11')" class="square"></div>
+          <div id="E21" onclick="click_event('E21')" class="square"></div>
+
+          <div class="space_relif"></div>
+
+          <div id="E31" onclick="click_event('E31')" class="square"></div>
+          <div id="E41" onclick="click_event('E41')" class="square"></div>
+        </div>
+
+        <div class="bus_couch">
+          <div id="F11" onclick="click_event('F11')" class="square"></div>
+          <div id="F21" onclick="click_event('F21')" class="square"></div>
+
+          <div class="space_relif"></div>
+
+          <div id="F31" onclick="click_event('F31')" class="square"></div>
+          <div id="F41" onclick="click_event('F41')" class="square"></div>
+        </div>
+
+        <div class="bus_couch">
+          <div id="G11" onclick="click_event('G11')" class="square"></div>
+          <div id="G21" onclick="click_event('G21')" class="square"></div>
+
+          <div class="space_relif"></div>
+
+          <div id="G31" onclick="click_event('G31')" class="square"></div>
+          <div id="G41" onclick="click_event('G41')" class="square"></div>
+        </div>
+
+        <!-- <div class="bus_couch">
+          <div id="H1" class="square"></div>
+          <div id="H2" class="square"></div>
+
+          <div class="space_relif"></div>
+
+          <div id="H3" class="square"></div>
+          <div id="H4" class="square"></div>
+        </div> -->
+
+        <!-- <div class="bus_couch">
+          <div id="I1" class="square"></div>
+          <div id="I2" class="square"></div>
+          <div class="space_relif"></div>
+          <div id="I3" class="square"></div>
+          <div id="I4" class="square"></div>
+        </div> -->
+      </div>
+
+      <div id="main_bus_container" class="main_bus_container">
+        <div class="Seats_info">
+          <h4>Seats</h4>
+        </div>
+
+        <div class="Seats_info">
+          <h4>Fare</h4>
+        </div>
+
+        <div class="Seats_info">
+          <h4>Class</h4>
+        </div>
+      </div>
+
+      <div id="straight_line" class="straight_line"></div>
+      <br />
+
+      <div id="seat_confirm" class="seat_confirm_div"></div>
+
+      <div id="last_div" class="last_div">
+        <button id="confirm_seated">Confirm</button>
+        <button id="cancel_data">Cancel</button>
+      </div>
+
+      
+    </div>
+    <div id="section_three" class="section-three">
+      <div class="bus_container_title">
+        <h2>Choose Your Seat</h2>
+      </div>
+      <br />
+
+      <div class="bus_container_sub_title">
+        <p>click the box for select or deslect</p>
+      </div>
+
+      <div class="bus_couch_sector">
+        <div class="bus_couch">
+          <div id="A12" onclick="click_event2('A12')" class="square"></div>
+          <div id="A22" onclick="click_event2('A22')" class="square"></div>
+
+          <div class="space_relif"></div>
+
+          <div id="A32" onclick="click_event2('A32')" class="square"></div>
+          <div id="A42" onclick="click_event2('A42')" class="square"></div>
+        </div>
+        <div class="bus_couch">
+          <div id="B12" onclick="click_event2('B12')" class="square"></div>
+          <div id="B22" onclick="click_event2('B22')" class="square"></div>
+
+          <div class="space_relif"></div>
+
+          <div id="B32" onclick="click_event2('B32')" class="square"></div>
+          <div id="B42" onclick="click_event2('B42')" class="square"></div>
+        </div>
+
+        <div class="bus_couch">
+          <div id="C12" onclick="click_event2('C12')" class="square"></div>
+          <div id="C22" onclick="click_event2('C22')" class="square"></div>
+
+          <div class="space_relif"></div>
+
+          <div id="C32" onclick="click_event2('C32')" class="square"></div>
+          <div id="C42" onclick="click_event2('C42')" class="square"></div>
+        </div>
+
+        <div class="bus_couch">
+          <div id="D12" onclick="click_event2('D12')" class="square"></div>
+          <div id="D22" onclick="click_event2('D22')" class="square"></div>
+
+          <div class="space_relif"></div>
+
+          <div id="D32" onclick="click_event2('D32')" class="square"></div>
+          <div id="D42" onclick="click_event2('D42')" class="square"></div>
+        </div>
+
+        <div class="bus_couch">
+          <div id="E12" onclick="click_event2('E12')" class="square"></div>
+          <div id="E22" onclick="click_event2('E22')" class="square"></div>
+
+          <div class="space_relif"></div>
+
+          <div id="E32" onclick="click_event2('E32')" class="square"></div>
+          <div id="E42" onclick="click_event2('E42')" class="square"></div>
+        </div>
+
+        <div class="bus_couch">
+          <div id="F12" onclick="click_event2('F12')" class="square"></div>
+          <div id="F22" onclick="click_event2('F22')" class="square"></div>
+
+          <div class="space_relif"></div>
+
+          <div id="F32" onclick="click_event2('F32')" class="square"></div>
+          <div id="F42" onclick="click_event2('F42')" class="square"></div>
+        </div>
+
+        <div class="bus_couch">
+          <div id="G12" onclick="click_event2('G12')" class="square"></div>
+          <div id="G22" onclick="click_event2('G22')" class="square"></div>
+
+          <div class="space_relif"></div>
+
+          <div id="G32" onclick="click_event2('G32')" class="square"></div>
+          <div id="G42" onclick="click_event2('G42')" class="square"></div>
+        </div>
+
+        <!-- <div class="bus_couch">
+          <div id="H1" class="square"></div>
+          <div id="H2" class="square"></div>
+
+          <div class="space_relif"></div>
+
+          <div id="H3" class="square"></div>
+          <div id="H4" class="square"></div>
+        </div> -->
+
+        <!-- <div class="bus_couch">
+          <div id="I1" class="square"></div>
+          <div id="I2" class="square"></div>
+          <div class="space_relif"></div>
+          <div id="I3" class="square"></div>
+          <div id="I4" class="square"></div>
+        </div> -->
+      </div>
+
+      <div id="main_bus_container" class="main_bus_container">
+        <div class="Seats_info">
+          <h4>Seats</h4>
+        </div>
+
+        <div class="Seats_info">
+          <h4>Fare</h4>
+        </div>
+
+        <div class="Seats_info">
+          <h4>Class</h4>
+        </div>
+      </div>
+
+      <div id="straight_line2" class="straight_line"></div>
+      <br />
+
+      <div id="seat_confirm2" class="seat_confirm_div"></div>
+
+      <div id="last_div2" class="last_div">
+        <button id="confirm_seated2">Confirm</button>
+        <button id="cancel_data2">Cancel</button>
+      </div>
+
+      
+    </div>
+    <div id="section_four" class="section-four">
+      <div class="bus_container_title">
+        <h2>Choose Your Seat</h2>
+      </div>
+      <br />
+
+      <div class="bus_container_sub_title">
+        <p>click the box for select or deslect</p>
+      </div>
+
+      <div class="bus_couch_sector">
+        <div class="bus_couch">
+          <div id="A13" onclick="click_event3('A13')" class="square"></div>
+          <div id="A23" onclick="click_event3('A23')" class="square"></div>
+
+          <div class="space_relif"></div>
+
+          <div id="A33" onclick="click_event3('A33')" class="square"></div>
+          <div id="A43" onclick="click_event3('A43')" class="square"></div>
+        </div>
+        <div class="bus_couch">
+          <div id="B13" onclick="click_event3('B13')" class="square"></div>
+          <div id="B23" onclick="click_event3('B23')" class="square"></div>
+
+          <div class="space_relif"></div>
+
+          <div id="B33" onclick="click_event3('B33')" class="square"></div>
+          <div id="B43" onclick="click_event3('B43')" class="square"></div>
+        </div>
+
+        <div class="bus_couch">
+          <div id="C13" onclick="click_event3('C13')" class="square"></div>
+          <div id="C23" onclick="click_event3('C23')" class="square"></div>
+
+          <div class="space_relif"></div>
+
+          <div id="C33" onclick="click_event3('C33')" class="square"></div>
+          <div id="C43" onclick="click_event3('C43')" class="square"></div>
+        </div>
+
+        <div class="bus_couch">
+          <div id="D13" onclick="click_event3('D13')" class="square"></div>
+          <div id="D23" onclick="click_event3('D23')" class="square"></div>
+
+          <div class="space_relif"></div>
+
+          <div id="D33" onclick="click_event3('D33')" class="square"></div>
+          <div id="D43" onclick="click_event3('D43')" class="square"></div>
+        </div>
+
+        <div class="bus_couch">
+          <div id="E13" onclick="click_event3('E13')" class="square"></div>
+          <div id="E23" onclick="click_event3('E23')" class="square"></div>
+
+          <div class="space_relif"></div>
+
+          <div id="E33" onclick="click_event3('E33')" class="square"></div>
+          <div id="E43" onclick="click_event3('E43')" class="square"></div>
+        </div>
+
+        <div class="bus_couch">
+          <div id="F13" onclick="click_event3('F13')" class="square"></div>
+          <div id="F23" onclick="click_event3('F23')" class="square"></div>
+
+          <div class="space_relif"></div>
+
+          <div id="F33" onclick="click_event3('F33')" class="square"></div>
+          <div id="F43" onclick="click_event3('F43')" class="square"></div>
+        </div>
+
+        <div class="bus_couch">
+          <div id="G13" onclick="click_event3('G13')" class="square"></div>
+          <div id="G23" onclick="click_event3('G23')" class="square"></div>
+
+          <div class="space_relif"></div>
+
+          <div id="G33" onclick="click_event3('G33')" class="square"></div>
+          <div id="G43" onclick="click_event3('G43')" class="square"></div>
+        </div>
+
+        <!-- <div class="bus_couch">
+          <div id="H1" class="square"></div>
+          <div id="H2" class="square"></div>
+
+          <div class="space_relif"></div>
+
+          <div id="H3" class="square"></div>
+          <div id="H4" class="square"></div>
+        </div> -->
+
+        <!-- <div class="bus_couch">
+          <div id="I1" class="square"></div>
+          <div id="I2" class="square"></div>
+          <div class="space_relif"></div>
+          <div id="I3" class="square"></div>
+          <div id="I4" class="square"></div>
+        </div> -->
+      </div>
+
+      <div id="main_bus_container" class="main_bus_container">
+        <div class="Seats_info">
+          <h4>Seats</h4>
+        </div>
+
+        <div class="Seats_info">
+          <h4>Fare</h4>
+        </div>
+
+        <div class="Seats_info">
+          <h4>Class</h4>
+        </div>
+      </div>
+
+      <div id="straight_line3" class="straight_line"></div>
+      <br />
+
+      <div id="seat_confirm3" class="seat_confirm_div"></div>
+
+      <div id="last_div3" class="last_div">
+        <button id="confirm_seated3">Confirm</button>
+        <button id="cancel_data3">Cancel</button>
+      </div>
+
+      
+    </div>
+    
+
+    <div id="payment" class="payment">
+      <div class="payment_container">
+        <div class="payment_type_check">
+          <div class="payment_category">
+            <div class="first">
+              <label id="text" for="native_master">DIU ONE CARD</label>
+              <label id="card_type2" for="native_master">
+                <img src="./img/image.png" />
+              </label>
+            </div>
+
+            <br />
+
+            <div id="native" class="for_native_card">
+              <form action="#">
+                <input type="password" id="pin" placeholder="ID Number" required />
+                <input type="number" id="num" placeholder="Contact Number" required />
+
+                <input
+                  id="confirmBtn"
+                  onclick="DataCatch()"
+                  value="Continue to checkout"
+                  class="btn"
+                />
+                <input
+                  id="cancelbtn2"
+                  onclick="cancelFunc()"
+                  value="Cancel"
+                  class="btn2"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    <script>
+      firebase.initializeApp({
+        apiKey: "AIzaSyD7qSlAu1KFdZ02XF1irVMYtjddjurFm1g",
+        authDomain: "transport2021-79353.firebaseapp.com",
+        projectId: "transport2021-79353",
+        storageBucket: "transport2021-79353.appspot.com",
+        messagingSenderId: "947174907726",
+        appId: "1:947174907726:web:0f6e51dc7109311cbc881f",
+        measurementId: "${config.measurementId}",
+      });
+    </script>
+
+    <script>
+      var auth = firebase.auth();
+      var user = auth.currentUser;
+      console.log(user);
+    </script>
+
+    <script src="./js/main_1.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/payment.js"></script>
+  </body>
+</html>
